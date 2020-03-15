@@ -22,6 +22,10 @@ class PrimeResultSet {
     return this.primes;
   }
 
+  public void setPrimes(Set<Integer> primes) {
+    this.primes = primes;
+  }
+
   void addPrime(Integer prime) {
     this.primes.add(prime);
   }

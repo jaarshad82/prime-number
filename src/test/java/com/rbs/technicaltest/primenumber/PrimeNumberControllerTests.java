@@ -2,7 +2,6 @@ package com.rbs.technicaltest.primenumber;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
@@ -13,6 +12,7 @@ import org.springframework.http.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.doReturn;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class PrimeNumberControllerTests {
@@ -37,7 +37,7 @@ public class PrimeNumberControllerTests {
     primeResultSet.addPrime(7);
     primeResultSet.addPrime(11);
 
-    BDDMockito.given(primeNumberService.generatePrimes(11)).willReturn(primeResultSet);
+    doReturn(primeResultSet).when(primeNumberService).generatePrimes(11);
   }
 
   @Test
