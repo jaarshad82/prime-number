@@ -37,7 +37,7 @@ public class PrimeNumberControllerTests {
     primeResultSet.addPrime(7);
     primeResultSet.addPrime(11);
 
-    doReturn(primeResultSet).when(primeNumberService).generatePrimes(11);
+    doReturn(primeResultSet).when(primeNumberService).generatePrimes(11, 1);
   }
 
   @Test
