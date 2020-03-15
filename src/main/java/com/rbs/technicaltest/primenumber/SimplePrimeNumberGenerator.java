@@ -1,6 +1,6 @@
 package com.rbs.technicaltest.primenumber;
 
-public class SimplePrimeNumberGenerator extends PrimeNumberGeneratorBase implements PrimeNumberGenerator  {
+public class SimplePrimeNumberGenerator extends PrimeNumberGeneratorBase implements PrimeNumberGenerator {
 
   @Override
   public PrimeResultSet generate(int initial) {

@@ -6,13 +6,13 @@ public class PrimeNumberGeneratorFactory {
     PrimeNumberGenerator primeNumberGenerator;
     switch (alg) {
       case 1:
-        primeNumberGenerator =  new SimplePrimeNumberGenerator();
+        primeNumberGenerator = new SimplePrimeNumberGenerator();
         break;
       case 2:
-        primeNumberGenerator =  new EratosthenesSievePrimeNumberGenerator();
+        primeNumberGenerator = new EratosthenesSievePrimeNumberGenerator();
         break;
       default:
-        primeNumberGenerator =  new SimplePrimeNumberGenerator();
+        primeNumberGenerator = new SimplePrimeNumberGenerator();
     }
     return primeNumberGenerator;
   }

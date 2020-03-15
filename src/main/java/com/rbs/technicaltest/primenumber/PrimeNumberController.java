@@ -22,7 +22,6 @@ public class PrimeNumberController {
   public ResponseEntity<PrimeResultSet> findPrimesJson(
       @PathVariable int initial,
       @RequestParam Optional<Integer> alg) {
-    System.out.println("alg: " + alg.orElse(1));
     return new ResponseEntity<>(primeNumberService.generatePrimes(initial, alg.orElse(1)), HttpStatus.OK);
   }
 
@@ -34,7 +33,6 @@ public class PrimeNumberController {
   public ResponseEntity<PrimeResultSet> findPrimesXml(
       @PathVariable int initial,
       @RequestParam Optional<Integer> alg) {
-    System.out.println("alg: " + alg.orElse(1));
     return new ResponseEntity<>(primeNumberService.generatePrimes(initial, alg.orElse(1)), HttpStatus.OK);
   }
 }

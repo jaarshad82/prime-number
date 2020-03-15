@@ -22,10 +22,8 @@ public class EratosthenesSievePrimeNumberGenerator extends PrimeNumberGeneratorB
       Arrays.fill(primeBools, true);
 
       for (int i = 2; i < Math.sqrt(initial); i++) {
-        System.out.println("point 1: " + i);
         if (primeBools[i]) {
           for (int k = 0, j = (i * i); j < initial; k++, j = (i * i) + (k * i)) {
-            System.out.println("point2: " + j);
             primeBools[j] = false;
           }
         }
@@ -38,6 +36,7 @@ public class EratosthenesSievePrimeNumberGenerator extends PrimeNumberGeneratorB
         }
       }
       primeResultSet.setPrimes(primes);
+      super.primes.put(initial, primes);
     }
 
     return primeResultSet;
